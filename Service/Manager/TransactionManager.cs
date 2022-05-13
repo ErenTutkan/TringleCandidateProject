@@ -23,7 +23,7 @@ namespace Service.Manager
             _accountRepository = accountRepository;
         }
 
-        public void AddTransaction(Transaction transaction)
+        private void AddTransaction(Transaction transaction)
         {
             _transactionRepository.Add(transaction);
         }

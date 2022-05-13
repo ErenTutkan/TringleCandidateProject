@@ -13,7 +13,7 @@ namespace Service.Manager
         ResponseDto<NoContent> Payment(PaymentDto payment);
         ResponseDto<NoContent> Deposit(DepositDto deposit);
         ResponseDto<NoContent> Withdraw(WithdrawDto withdraw);
-        void AddTransaction(Transaction transaction);
+      
         ResponseDto<List<Transaction>> GetByTransactionHistory(int accountNumber);
     }
 }
