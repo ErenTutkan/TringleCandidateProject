@@ -16,7 +16,7 @@ namespace Service.Filters
             if (!context.ModelState.IsValid)
             {
                 var errors=context.ModelState.Values.SelectMany(x=>x.Errors).Select(x=>x.ErrorMessage).ToList();
-                context.Result = new BadRequestObjectResult(ResponseDto<NoContent>.Fail(errors,404));
+                context.Result = new ObjectResult(ResponseDto<NoContent>.Fail(errors, 400)) { StatusCode=400};
             }
         }
     }
